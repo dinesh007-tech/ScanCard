@@ -1,0 +1,210 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Features - ScanCard AI</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#0060ab",
+                        "secondary-container": "#dee0e2",
+                        "on-primary-container": "#ffffff",
+                        "surface-bright": "#faf8fe",
+                        "on-primary-fixed": "#001c39",
+                        "primary-fixed": "#d3e3ff",
+                        "tertiary": "#5e5d60",
+                        "surface": "#faf8fe",
+                        "inverse-primary": "#a3c9ff",
+                        "secondary-fixed-dim": "#c5c7c8",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#717783",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dad9df",
+                        "on-secondary-fixed": "#191c1e",
+                        "on-surface": "#1a1b1f",
+                        "surface-container-low": "#f4f3f8",
+                        "tertiary-fixed": "#e4e2e4",
+                        "on-tertiary-fixed-variant": "#474649",
+                        "surface-container": "#eeedf3",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#404752",
+                        "outline-variant": "#c0c7d4",
+                        "surface-container-high": "#e9e7ed",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#606365",
+                        "primary-container": "#0078d4",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#a3c9ff",
+                        "inverse-on-surface": "#f1f0f5",
+                        "on-background": "#1a1b1f",
+                        "secondary-fixed": "#e1e2e4",
+                        "tertiary-fixed-dim": "#c8c6c8",
+                        "surface-variant": "#e3e2e7",
+                        "primary": "#005faa",
+                        "on-primary-fixed-variant": "#004883",
+                        "inverse-surface": "#2f3034",
+                        "on-tertiary-container": "#ffffff",
+                        "on-secondary-fixed-variant": "#444749",
+                        "secondary": "#5c5f60",
+                        "surface-container-highest": "#e3e2e7",
+                        "tertiary-container": "#777678",
+                        "background": "#faf8fe",
+                        "on-tertiary-fixed": "#1b1b1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "24px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "display-hero-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-hero": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-hero-mobile": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "display-hero": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #ffffff; }
+        .glass-panel { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.2); }
+        .bento-card { background-color: #F7F8FA; box-shadow: 0 20px 40px rgba(26, 27, 31, 0.04); }
+    </style>
+</head>
+<body class="text-on-surface antialiased overflow-x-hidden min-h-screen">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 dark:bg-black/70 backdrop-blur-xl border-b border-white/20 shadow-sm hidden md:block">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface-variant">
+                ScanCard
+            </div>
+<nav class="flex gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md hover:scale-95 transition-transform duration-200" href="#">Features</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-95 transition-transform duration-200" href="#">Enterprise</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md text-body-md hover:scale-95 transition-transform duration-200" href="#">Pricing</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:scale-95 transition-transform duration-200 ease-in-out">
+                Get Started
+            </button>
+</div>
+</header>
+<!-- Mobile Nav (Simplified for demo) -->
+<header class="fixed top-0 w-full z-50 glass-panel md:hidden">
+<div class="flex justify-between items-center px-margin-mobile py-4">
+<div class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">ScanCard</div>
+<span class="material-symbols-outlined text-on-surface">menu</span>
+</div>
+</header>
+<main class="pt-[120px]">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap text-center">
+<h1 class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero text-on-surface mb-8 max-w-4xl mx-auto tracking-tight">
+                Intelligence in <br class="hidden md:block">every scan.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+                Our advanced AI OCR engine goes beyond simple text recognition. It understands context, structure, and intent, transforming physical cards into actionable digital intelligence instantly.
+            </p>
+<div class="relative w-full h-[614px] rounded-3xl overflow-hidden glass-panel shadow-2xl flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" data-alt="A cinematic, ultra-high-resolution macro shot of a sleek smartphone hovering over a premium minimalist business card. The phone screen displays glowing, futuristic OCR scanning reticles processing the text. The lighting is soft, high-key studio lighting reflecting a pristine light-mode aesthetic with clean whites and subtle blue tinted shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA7i7btB5mGYjhtkgaTozG5OzgHeU-2Z0_c_-d9CfjRdEnyga2EP20rGGLCtKa134wszJcVxpUbGwL4zP5XXgaNWx2jrNFaRLMRZ0mHoI6bN3fAzmoCAW-eiJkPZD8oYJIDwEftEyin9exro0xQuvcEfWWqsoFEeB09Bfi7GzqJ9f_Q-YBWkY-oXVPd8T-ZRTIc3OpNgga2aTOitfrcbrOckQvTsqZ6Ax0SxzjRxGkYFUBMFudngPGshijFLr0gFFmjoaQ3TwwkA">
+<div class="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
+</div>
+</section>
+<!-- Features Bento Grid -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- AI OCR Engine (Spans 8 cols) -->
+<div class="md:col-span-8 bento-card rounded-3xl p-12 flex flex-col justify-between overflow-hidden relative group h-[500px]">
+<div class="relative z-10 max-w-md">
+<span class="inline-block px-3 py-1 bg-primary-fixed/30 text-primary font-label-sm text-label-sm rounded-full uppercase tracking-widest mb-6">Neural OCR</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Flawless extraction.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Our proprietary vision models achieve 99.9% accuracy across 40+ languages, handling exotic fonts, poor lighting, and complex layouts with ease.</p>
+</div>
+<div class="absolute bottom-0 right-0 w-2/3 h-2/3 transform translate-x-12 translate-y-12 group-hover:-translate-y-4 transition-transform duration-700 ease-out">
+<img class="w-full h-full object-cover rounded-tl-3xl shadow-2xl" data-alt="A sophisticated abstract visualization of AI optical character recognition. Floating glass-like text fragments are being actively scanned by a sweeping blue laser light. The background is a stark, clean white minimalist environment. The aesthetic is high-tech, precise, and premium, utilizing depth of field to emphasize the scanning process." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADV2STohCegAsEMgnuxG8z_xP9qy68SrpEvhRKrEU269Bx1yMz6rY7YdmRGpf81ihVR6VSKw-j-znGb_U922tYUijdEI-_BZ1oXaYRlhAFz3a9u_Z7-DnHqUvNErrmSTRXcBs555uehZowggQfpytN9HF0Y7RIZcUWXzNGh5nQExcoFjPpA_anWPi2nnYg5VKYv6eDQPQS4zrZRGiDKqc9XUbHT2qsMmPg8-QyZKKlB-kVKMKidOU9WULF_ROCPMwAhk-UV67lJA">
+</div>
+</div>
+<!-- Security (Spans 4 cols) -->
+<div class="md:col-span-4 bento-card rounded-3xl p-12 flex flex-col relative overflow-hidden h-[500px]">
+<span class="inline-block px-3 py-1 bg-surface-variant text-on-surface-variant font-label-sm text-label-sm rounded-full uppercase tracking-widest mb-6 w-max">Enterprise Grade</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Zero-Trust Architecture.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">End-to-end AES-256 encryption. Data is processed locally on device whenever possible, ensuring your contacts never leave your control unencrypted.</p>
+<div class="mt-auto flex justify-center items-center opacity-80">
+<span class="material-symbols-outlined text-[120px] text-surface-tint font-light">lock</span>
+</div>
+</div>
+<!-- Smart CRM Sync (Spans 6 cols) -->
+<div class="md:col-span-6 bento-card rounded-3xl p-12 flex flex-col h-[500px]">
+<span class="inline-block px-3 py-1 bg-primary-fixed/30 text-primary font-label-sm text-label-sm rounded-full uppercase tracking-widest mb-6 w-max">Seamless Integration</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Direct to Salesforce.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12">Automated deduplication, field mapping, and activity logging. Watch scanned cards populate your CRM pipeline instantly.</p>
+<div class="flex-grow rounded-2xl overflow-hidden bg-white shadow-inner flex items-center justify-center p-8">
+<img class="w-full h-full object-contain" data-alt="A clean, minimalist UI illustration showing a fluid data flow from a scanned business card icon to a structured CRM database interface (resembling Salesforce). The visual uses soft blue and white tones, smooth curved connecting lines, and subtle drop shadows on a pristine light gray background to convey seamless synchronization." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQW2fBCMbqRBipHnM8VA9Wg4SLQDk_GXiHLXrTzg2Vs5pytk1McBTvVWNdY9wJtDdhUltZeu_2ZWs35MKSvnuLHVxIVAYSkV5KBNDE6U2gFNHv5zvwTkXJy_u7Fqaw4_JtWRwTVoHZdu65QYrXuZOGAPDd_AHQRVWJ3MzX3-10sKtN9olDrMCVmKvBAvPxfMjoj-BqzYFg04FT7dWBt1EMxs-6OiFihGMWhVFiQquZ-BP5Ii9LWkAkFWyFSBRda0D2K2oHbhgr1A">
+</div>
+</div>
+<!-- Mobile App Experience (Spans 6 cols) -->
+<div class="md:col-span-6 bento-card rounded-3xl p-12 flex flex-col items-center text-center h-[500px] relative overflow-hidden">
+<span class="inline-block px-3 py-1 bg-surface-variant text-on-surface-variant font-label-sm text-label-sm rounded-full uppercase tracking-widest mb-6 relative z-10">Native iOS</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4 relative z-10">Fluid capture.</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 relative z-10 max-w-sm">Designed for one-handed operation at busy conferences. Auto-capture detects the card boundaries and snaps instantly.</p>
+<div class="absolute bottom-[-100px] w-64 h-[400px] bg-white rounded-[40px] shadow-2xl border-[8px] border-surface-container-highest overflow-hidden z-0">
+<img class="w-full h-full object-cover" data-alt="A close-up, high-fidelity render of a modern smartphone screen displaying a camera viewfinder interface aimed at a business card. The UI overlays minimal framing guides in soft blue. The overall mood is bright, professional, and Apple-inspired, set against a soft white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyVjw4PnfFyqGg9VT4zxCTLUCcCGZjElKFESfLvLusY9k1ocKx1cDq_-3WjkYgrmL8xZ_sRIOC-9svyTZMMjZIdgdO8BDGNtRIjyECNYTuiou2LJb6mP3SSKeFaKo8D9t5ULfLCKeKTmzNRkAMAwMqDVwio-KyWC1nQ2ALZ3p7DFMNPdHlwjK7FAjpiz-DwS-ZMEgMRoFUypuEkAB6TZPZKROh3yI7QYvHgIjQ8BqnCpGJvzCU0pvJJ_vxMesSBu4aOkhCvLKpmA">
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface dark:bg-inverse-surface bg-surface-container-low dark:bg-surface-container-lowest flat">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">ScanCard</div>
+<p class="text-on-surface-variant font-body-md text-body-md opacity-80">© 2024 ScanCard AI. All rights reserved.</p>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Features</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Enterprise</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Pricing</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Terms</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

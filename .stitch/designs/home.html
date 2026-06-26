@@ -1,0 +1,404 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>ScanCard | Transform every card into your next opportunity</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#0060ab",
+                      "secondary-container": "#dee0e2",
+                      "on-primary-container": "#ffffff",
+                      "surface-bright": "#faf8fe",
+                      "on-primary-fixed": "#001c39",
+                      "primary-fixed": "#d3e3ff",
+                      "tertiary": "#5e5d60",
+                      "surface": "#faf8fe",
+                      "inverse-primary": "#a3c9ff",
+                      "secondary-fixed-dim": "#c5c7c8",
+                      "surface-container-lowest": "#ffffff",
+                      "outline": "#717783",
+                      "error-container": "#ffdad6",
+                      "surface-dim": "#dad9df",
+                      "on-secondary-fixed": "#191c1e",
+                      "on-surface": "#1a1b1f",
+                      "surface-container-low": "#f4f3f8",
+                      "tertiary-fixed": "#e4e2e4",
+                      "on-tertiary-fixed-variant": "#474649",
+                      "surface-container": "#eeedf3",
+                      "on-primary": "#ffffff",
+                      "on-surface-variant": "#404752",
+                      "outline-variant": "#c0c7d4",
+                      "surface-container-high": "#e9e7ed",
+                      "error": "#ba1a1a",
+                      "on-secondary": "#ffffff",
+                      "on-secondary-container": "#606365",
+                      "primary-container": "#0078d4",
+                      "on-error-container": "#93000a",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#a3c9ff",
+                      "inverse-on-surface": "#f1f0f5",
+                      "on-background": "#1a1b1f",
+                      "secondary-fixed": "#e1e2e4",
+                      "tertiary-fixed-dim": "#c8c6c8",
+                      "surface-variant": "#e3e2e7",
+                      "primary": "#005faa",
+                      "on-primary-fixed-variant": "#004883",
+                      "inverse-surface": "#2f3034",
+                      "on-tertiary-container": "#ffffff",
+                      "on-secondary-fixed-variant": "#444749",
+                      "secondary": "#5c5f60",
+                      "surface-container-highest": "#e3e2e7",
+                      "tertiary-container": "#777678",
+                      "background": "#faf8fe",
+                      "on-tertiary-fixed": "#1b1b1d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "container-max": "1200px",
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-mobile": "24px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "display-hero-mobile": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-hero": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "display-hero-mobile": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-hero": [
+                              "80px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .bento-card {
+            background: #F7F8FA;
+            box-shadow: 0 20px 40px rgba(26, 27, 31, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 30px 60px rgba(26, 27, 31, 0.08);
+        }
+        .glow-effect {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(0, 95, 170, 0.15) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl border-b border-white/20 shadow-sm transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-on-surface">ScanCard</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-95 duration-200 ease-in-out" href="#">Features</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-95 duration-200 ease-in-out" href="#">Enterprise</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors hover:scale-95 duration-200 ease-in-out" href="#">Pricing</a>
+</div>
+<button class="hidden md:block bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:scale-95 transition-transform duration-200">
+                Get Started
+            </button>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24 md:pt-32">
+<!-- Hero Section -->
+<section class="relative px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto py-16 md:py-section-gap flex flex-col md:flex-row items-center gap-gutter min-h-[819px]">
+<div class="glow-effect top-0 left-0"></div>
+<div class="flex-1 z-10 w-full md:w-1/2 flex flex-col items-start text-left">
+<h1 class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero text-on-surface mb-6 leading-tight">
+                    Transform every card into your next <span class="text-primary">opportunity.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                    Cinematic digitisation meets enterprise-grade CRM integration. ScanCard uses advanced AI to instantly turn physical business cards into actionable intelligence.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md shadow-lg shadow-primary/20 hover:scale-[0.98] transition-transform w-full sm:w-auto flex items-center justify-center gap-2">
+                        Get Started
+                        <span class="material-symbols-outlined" style="font-size: 18px;">arrow_forward</span>
+</button>
+<button class="bg-white text-on-surface border border-outline-variant px-8 py-4 rounded-full font-label-md text-label-md hover:bg-surface-container-low hover:scale-[0.98] transition-transform w-full sm:w-auto flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" style="font-size: 18px;">play_circle</span>
+                        Watch Video
+                    </button>
+</div>
+</div>
+<div class="flex-1 w-full md:w-1/2 relative z-10 mt-12 md:mt-0 flex justify-end">
+<div class="relative w-full max-w-md aspect-[3/4] bento-card rounded-3xl overflow-hidden border border-white">
+<img alt="Smartphone scanning business card" class="w-full h-full object-cover rounded-3xl" data-alt="A highly detailed 3D render of a sleek, modern smartphone levitating in a bright, pure white minimalist studio setting. The screen displays a sophisticated UI with soft blue glowing elements, capturing a physical business card below it. The lighting is high-key and cinematic, highlighting the premium glass and metal textures of the device against a pristine background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuALr0Q7_X_iClEAyf-aVJ-8MNKUZCavFmNUougPhl0bZpvTqIOKS1MkqzmGbJoguSdFlHNWLQxRdyXpQwiSOWi2dcqhpMqXvgmf16WnO9zP08Jle5TrKK1Ov4MSdeVsBAR36T86Z8yrZZso2Y2wVjkmlsTRinHUeYuwhoWhGdZFf69EOuoMSWlPxVuwFqUHBHIW5Zlu1bEU9CPGpT9O8clD-yumRwrBbq2_4ueEEvr2SGRtunVfosXY8ci0TOsVEDMz47VqSex7VA">
+<div class="absolute inset-0 bg-gradient-to-t from-surface/80 to-transparent flex items-end p-8">
+<div class="glass-panel p-4 rounded-xl w-full flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">document_scanner</span>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface">Scanning Complete</p>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">99.9% Accuracy</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Problem -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low text-center">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-6">
+                    The end of forgotten connections.
+                </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Stacks of paper cards sitting on desks represent lost revenue and missed partnerships. Stop manually entering data and start building relationships.
+                </p>
+</div>
+</section>
+<!-- Solution Showcase -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative">
+<div class="glow-effect top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px]"></div>
+<div class="w-full aspect-video bento-card rounded-3xl overflow-hidden relative border border-white z-10">
+<img alt="Digitisation process" class="w-full h-full object-cover opacity-90" data-alt="A cinematic, ultra-realistic visual showing a crisp, tactile paper business card dissolving into glowing, ethereal blue digital data particles. The transition happens mid-air over a sleek, high-end desk setting. The scene is brightly lit with a clean, light-mode aesthetic, emphasizing the magical transformation from physical paper to sophisticated digital information." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4kh_Jxtz19eBpHAUVzwMS71ycbgGsEuHqyjxTWd-LCloY9UnHSHz29MBi0km_7lA4Jg8WwoodssgOVNvz_DFzJ4zfh_ZzR1uzMPdS7tg5nJpo_-e6ofbiyALzN-jZSDFoUpurq8lAStapDJG2HCMYFyGrk9iVDu-37qbsDZnIJ0TJ9xgK4vyh2vT-FrqO-koltGldfjUPpVmFnm5WqIJhiTE8XmFA67_82yA0v8Vl8G5ge8m7Elih8srZr83ZEys0NtXaHAF_cQ">
+<div class="absolute inset-0 flex items-center justify-center bg-black/10">
+<button class="w-20 h-20 bg-white/90 backdrop-blur-md rounded-full flex items-center justify-center text-primary shadow-2xl hover:scale-105 transition-transform">
+<span class="material-symbols-outlined" data-weight="fill" style="font-size: 32px;">play_arrow</span>
+</button>
+</div>
+</div>
+</section>
+<!-- AI Features Bento Grid -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-12 text-center">Intelligence built-in.</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bento-card rounded-2xl p-8 border border-white md:col-span-2">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">center_focus_strong</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Precision OCR</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 max-w-md">
+                        Industry-leading optical character recognition boasting 99.9% accuracy. Reads obscure fonts, multi-lingual text, and complex card layouts instantly.
+                    </p>
+<div class="h-32 bg-white rounded-xl border border-outline-variant/30 flex items-center justify-center p-4">
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[99%]"></div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bento-card rounded-2xl p-8 border border-white">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">auto_awesome</span>
+</div>
+<h3 class="font-body-lg text-body-lg font-semibold text-on-surface mb-4">Smart Categorization</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        AI automatically tags and sorts contacts by industry, role, and location based on context clues.
+                    </p>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-surface-container-low rounded-full font-label-sm text-label-sm text-on-surface-variant uppercase">Fintech</span>
+<span class="px-3 py-1 bg-surface-container-low rounded-full font-label-sm text-label-sm text-on-surface-variant uppercase">CEO</span>
+<span class="px-3 py-1 bg-surface-container-low rounded-full font-label-sm text-label-sm text-on-surface-variant uppercase">London</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bento-card rounded-2xl p-8 border border-white md:col-span-3 flex flex-col md:flex-row items-center gap-8">
+<div class="flex-1">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container text-on-tertiary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined">insights</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Actionable Insights</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Turn static data into dynamic leads. ScanCard connects with public professional networks to enrich profiles and suggest the perfect icebreaker for your follow-up.
+                        </p>
+</div>
+<div class="flex-1 w-full bg-white rounded-xl p-6 border border-outline-variant/30 shadow-sm">
+<div class="flex items-center gap-4 mb-4 pb-4 border-b border-surface-container-low">
+<div class="w-10 h-10 bg-surface-container rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">person</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-on-surface">Alex Mercer</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant">VP Engineering at Acme Corp</div>
+</div>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant bg-surface-container-lowest p-4 rounded-lg border border-outline-variant/20">
+<span class="text-primary font-medium">Suggestion:</span> "Congratulate Alex on Acme Corp's recent Series B funding round mentioned in TechCrunch."
+                         </div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop text-center bg-primary text-on-primary">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg mb-6">
+                    Join the future of professional networking.
+                </h2>
+<p class="font-body-lg text-body-lg opacity-90 mb-10">
+                    Stop collecting paper. Start collecting opportunities.
+                </p>
+<button class="bg-white text-primary px-8 py-4 rounded-full font-label-md text-label-md shadow-lg hover:scale-[0.98] transition-transform">
+                    Start Scanning for Free
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface w-full py-section-gap bg-surface-container-low dark:bg-surface-container-lowest flat">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-4">ScanCard</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80 hover:opacity-100 transition-opacity">
+                    © 2024 ScanCard AI. All rights reserved.
+                </p>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Features</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Enterprise</a>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Pricing</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy</a>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Terms</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle nav shadow on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('shadow-sm');
+            } else {
+                nav.classList.add('shadow-sm');
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body></html>

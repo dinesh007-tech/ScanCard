@@ -1,0 +1,325 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Enterprise - ScanCard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#0060ab",
+                        "secondary-container": "#dee0e2",
+                        "on-primary-container": "#ffffff",
+                        "surface-bright": "#faf8fe",
+                        "on-primary-fixed": "#001c39",
+                        "primary-fixed": "#d3e3ff",
+                        "tertiary": "#5e5d60",
+                        "surface": "#faf8fe",
+                        "inverse-primary": "#a3c9ff",
+                        "secondary-fixed-dim": "#c5c7c8",
+                        "surface-container-lowest": "#ffffff",
+                        "outline": "#717783",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#dad9df",
+                        "on-secondary-fixed": "#191c1e",
+                        "on-surface": "#1a1b1f",
+                        "surface-container-low": "#f4f3f8",
+                        "tertiary-fixed": "#e4e2e4",
+                        "on-tertiary-fixed-variant": "#474649",
+                        "surface-container": "#eeedf3",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#404752",
+                        "outline-variant": "#c0c7d4",
+                        "surface-container-high": "#e9e7ed",
+                        "error": "#ba1a1a",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#606365",
+                        "primary-container": "#0078d4",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#a3c9ff",
+                        "inverse-on-surface": "#f1f0f5",
+                        "on-background": "#1a1b1f",
+                        "secondary-fixed": "#e1e2e4",
+                        "tertiary-fixed-dim": "#c8c6c8",
+                        "surface-variant": "#e3e2e7",
+                        "primary": "#005faa",
+                        "on-primary-fixed-variant": "#004883",
+                        "inverse-surface": "#2f3034",
+                        "on-tertiary-container": "#ffffff",
+                        "on-secondary-fixed-variant": "#444749",
+                        "secondary": "#5c5f60",
+                        "surface-container-highest": "#e3e2e7",
+                        "tertiary-container": "#777678",
+                        "background": "#faf8fe",
+                        "on-tertiary-fixed": "#1b1b1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "container-max": "1200px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "margin-mobile": "24px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "display-hero-mobile": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-hero": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-hero-mobile": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "display-hero": ["80px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(247, 248, 250, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(26, 27, 31, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col relative overflow-x-hidden antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-black/70 backdrop-blur-xl border-b border-white/20 shadow-sm transition-all duration-300" id="global-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface-variant flex items-center gap-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">contact_page</span>
+                ScanCard
+            </a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Features</a>
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Enterprise</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:block font-label-md text-label-md text-primary hover:bg-primary-fixed/50 px-4 py-2 rounded-full transition-colors">Log In</button>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-2.5 rounded-full hover:scale-95 transition-transform duration-200 shadow-sm">Get Started</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-section-gap">
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 md:py-32 flex flex-col items-center text-center relative z-10">
+<div class="inline-flex items-center gap-2 bg-surface-container-low px-4 py-1.5 rounded-full mb-8 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface uppercase tracking-widest">Enterprise Ready</span>
+</div>
+<h1 class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero text-on-surface max-w-4xl mb-6 leading-tight">
+                Networking for the <span class="text-primary relative inline-block">modern<span class="absolute bottom-2 left-0 w-full h-3 bg-primary/10 -z-10 rounded"></span></span> enterprise.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">
+                Deploy seamless contact management across your entire global organization. Uncompromising security meets effortless scalability.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full justify-center">
+<button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-full hover:scale-95 transition-transform duration-200 shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+                    Contact Sales <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="bg-surface-container-low text-on-surface font-label-md text-label-md px-8 py-4 rounded-full hover:bg-surface-container hover:scale-95 transition-all duration-200 border border-outline-variant/30 flex items-center justify-center gap-2">
+                    View Documentation
+                </button>
+</div>
+</section>
+<!-- Scalability Section (Bento Grid) -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap relative z-10">
+<div class="mb-16">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-4">Scale without friction.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Manage thousands of digital identities across global teams from a single, centralized dashboard.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px]">
+<!-- Large Card -->
+<div class="md:col-span-2 glass-card rounded-[24px] p-8 flex flex-col justify-between relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent z-0"></div>
+<div class="relative z-10">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">public</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Global Directory</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Sync contacts instantly across regional offices. Maintain brand consistency with enterprise-wide templates.</p>
+</div>
+<!-- Decorative Graphic -->
+<div class="relative w-full h-32 mt-6 rounded-lg overflow-hidden border border-white/50 bg-white/40 shadow-sm flex items-end justify-center pb-0 z-10">
+<div class="w-3/4 h-24 bg-surface rounded-t-xl border-t border-x border-outline-variant/30 shadow-md flex flex-col p-4">
+<div class="flex gap-2 mb-3">
+<div class="w-3 h-3 rounded-full bg-error-container"></div>
+<div class="w-3 h-3 rounded-full bg-secondary-container"></div>
+<div class="w-3 h-3 rounded-full bg-primary-container"></div>
+</div>
+<div class="flex-grow flex flex-col gap-2">
+<div class="w-full h-3 bg-surface-variant rounded-full"></div>
+<div class="w-2/3 h-3 bg-surface-variant rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Small Card 1 -->
+<div class="glass-card rounded-[24px] p-8 flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-surface">group_add</span>
+</div>
+<h3 class="font-headline-md text-[24px] font-semibold text-on-surface mb-2">Bulk Provisioning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Onboard hundreds of employees instantly with CSV uploads or automated SCIM provisioning.</p>
+<div class="mt-auto">
+<a class="font-label-md text-label-md text-primary flex items-center gap-1 hover:gap-2 transition-all" href="#">Learn more <span class="material-symbols-outlined text-[16px]">chevron_right</span></a>
+</div>
+</div>
+<!-- Small Card 2 -->
+<div class="glass-card rounded-[24px] p-8 flex flex-col">
+<div class="w-12 h-12 rounded-full bg-surface-container-high flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-surface">analytics</span>
+</div>
+<h3 class="font-headline-md text-[24px] font-semibold text-on-surface mb-2">Usage Analytics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Track connection rates and ROI across departments with detailed organizational insights.</p>
+</div>
+<!-- Small Card 3 (Span 2) -->
+<div class="md:col-span-2 glass-card rounded-[24px] p-8 flex flex-col md:flex-row items-center gap-8 relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('placeholder')] bg-cover bg-center opacity-5 mix-blend-overlay" data-alt="Abstract soft geometric pattern in cool blues and stark whites, resembling a high-tech network grid, minimalist and premium lighting."></div>
+<div class="flex-1 relative z-10">
+<div class="inline-flex items-center gap-2 bg-surface px-3 py-1 rounded-full border border-outline-variant/30 mb-4">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">99.99% Uptime</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Enterprise SLA</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Guaranteed reliability for critical networking infrastructure, backed by our dedicated support engineering team.</p>
+</div>
+<div class="w-full md:w-1/3 h-full min-h-[120px] bg-white rounded-xl shadow-sm border border-outline-variant/20 flex items-center justify-center relative z-10">
+<div class="text-center">
+<span class="block font-display-hero-mobile text-primary font-bold">24/7</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-wide">Support</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Security & Compliance -->
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<div class="flex flex-col md:flex-row gap-16 items-center">
+<div class="w-full md:w-1/2 order-2 md:order-1">
+<div class="relative w-full aspect-square max-h-[500px] rounded-[32px] overflow-hidden shadow-2xl">
+<div class="absolute inset-0 bg-gradient-to-tr from-surface-container-high to-surface-container-lowest z-0"></div>
+<img class="absolute inset-0 w-full h-full object-cover mix-blend-multiply opacity-80 z-10" data-alt="A highly secure, conceptual server room bathed in soft, clinical white and cool blue light. Minimalist glass enclosures, floating UI elements indicating encrypted data flows. Premium, modern corporate tech aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy9J7-fGxr7oUxZ8oB5JMqM74HYzHWCz3FCkrrYRtZMXrfVuHg8O3y1JINveOaERrS8FxL5GFf4wi2y8WterQQ7ONo61uBVCKNrt4KntABAImwE92dWAqS8Q7ykonn4BNlxvRh5veAEJWnNgwNvm6HDVYSN3O-DHl-pE1NK7dHVPuJqx0PFd-CkApkZQMUGp4GD0af0_WYWWHh-6DKxSUl3PiSgkcpvR5NhH-4MsWEzWTj1OhPV2Hb-gF-YYUR9K6S2rQ4RIfG1w">
+<!-- Floating Badges overlay -->
+<div class="absolute inset-0 z-20 flex flex-col items-center justify-center gap-4 p-8">
+<div class="bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg border border-white flex items-center gap-4 transform -translate-x-8">
+<span class="material-symbols-outlined text-primary text-[32px]">shield_lock</span>
+<div>
+<div class="font-label-md text-on-surface font-bold">SOC 2 Type II</div>
+<div class="font-label-sm text-on-surface-variant">Certified</div>
+</div>
+</div>
+<div class="bg-white/90 backdrop-blur-md px-6 py-4 rounded-2xl shadow-lg border border-white flex items-center gap-4 transform translate-x-12">
+<span class="material-symbols-outlined text-primary text-[32px]">gavel</span>
+<div>
+<div class="font-label-md text-on-surface font-bold">GDPR Compliant</div>
+<div class="font-label-sm text-on-surface-variant">Global Standard</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 order-1 md:order-2">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-6">Security is our foundation.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">We protect your organization's sensitive contact data with military-grade encryption and strict access controls. Trust is not an option; it's the core of our platform.</p>
+<ul class="space-y-6">
+<li class="flex items-start gap-4 pb-6 border-b border-surface-variant last:border-0 last:pb-0">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">enhanced_encryption</span>
+</div>
+<div>
+<h4 class="font-label-md text-[18px] text-on-surface font-semibold mb-1">End-to-End Encryption</h4>
+<p class="font-body-md text-on-surface-variant">All data is encrypted at rest (AES-256) and in transit (TLS 1.3).</p>
+</div>
+</li>
+<li class="flex items-start gap-4 pb-6 border-b border-surface-variant last:border-0 last:pb-0">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">admin_panel_settings</span>
+</div>
+<div>
+<h4 class="font-label-md text-[18px] text-on-surface font-semibold mb-1">Granular Access Control</h4>
+<p class="font-body-md text-on-surface-variant">Role-Based Access Control (RBAC) ensures users only see what they need.</p>
+</div>
+</li>
+<li class="flex items-start gap-4 pb-6 border-b border-surface-variant last:border-0 last:pb-0">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]">policy</span>
+</div>
+<div>
+<h4 class="font-label-md text-[18px] text-on-surface font-semibold mb-1">Data Privacy First</h4>
+<p class="font-body-md text-on-surface-variant">Full compliance with GDPR, CCPA, and global data sovereignty laws.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container-low dark:bg-surface-container-lowest flat">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1 mb-8 md:mb-0">
+<a class="font-headline-md text-headline-md font-bold text-on-surface flex items-center gap-2 mb-4" href="#">
+<span class="material-symbols-outlined text-primary">contact_page</span>
+                    ScanCard
+                </a>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80 mt-8">© 2024 ScanCard AI. All rights reserved.</p>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Features</a>
+<a class="font-body-md text-body-md text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Enterprise</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Pricing</a>
+</div>
+<div class="col-span-1 flex flex-col gap-4">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Privacy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Terms</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors opacity-80 hover:opacity-100 transition-opacity" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for TopNavBar
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('global-nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+                nav.classList.replace('py-4', 'py-2');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.replace('py-2', 'py-4');
+            }
+        });
+    </script>
+</body></html>
