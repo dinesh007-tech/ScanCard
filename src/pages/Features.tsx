@@ -7,7 +7,7 @@ export const Features: React.FC = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap text-center">
+      <section className="max-w-container-max  mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,13 +51,13 @@ export const Features: React.FC = () => {
             viewport={{ once: true }}
             className="md:col-span-8 bg-surface-container-low rounded-3xl p-8 md:p-12 flex flex-col justify-between overflow-hidden relative group h-[500px] border border-white"
           >
-            <div className="relative z-10 max-w-md">
-              <span className="inline-block px-3 py-1 bg-primary-fixed/30 text-primary font-label-sm text-label-sm rounded-full uppercase tracking-widest mb-6">{featuresData.bento[0].badge}</span>
+            <div className="relative z-10 w-full md:w-[45%] flex flex-col justify-start">
+              <span className="inline-block px-3 py-1 bg-primary-fixed/30 text-primary font-label-sm text-label-sm rounded-full uppercase tracking-widest mb-6 w-max">{featuresData.bento[0].badge}</span>
               <h2 className="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface mb-4">{featuresData.bento[0].title}</h2>
               <p className="font-body-md text-body-md text-on-surface-variant">{featuresData.bento[0].description}</p>
             </div>
-            <div className="absolute bottom-0 right-0 w-2/3 h-2/3 transform translate-x-12 translate-y-12 group-hover:-translate-y-4 transition-transform duration-700 ease-out">
-              <img className="w-full h-full object-cover rounded-tl-3xl shadow-2xl" src={featuresData.bento[0].image} alt="Neural OCR" />
+            <div className="absolute bottom-0 right-0 w-[85%] md:w-[50%] h-[50%] md:h-[80%] transform translate-x-4 md:translate-x-8 translate-y-8 group-hover:translate-y-0 transition-transform duration-700 ease-out flex items-end justify-end">
+              <img className="w-full h-full object-cover object-left-top rounded-tl-3xl shadow-2xl border-t border-l border-white/10" src={featuresData.bento[0].image} alt="Neural OCR" />
             </div>
           </motion.div>
 
@@ -103,8 +103,8 @@ export const Features: React.FC = () => {
           >
             <span className="inline-block px-3 py-1 bg-surface-variant text-on-surface-variant font-label-sm text-label-sm rounded-full uppercase tracking-widest mb-6 relative z-10">{featuresData.bento[3].badge}</span>
             <h3 className="font-headline-md text-headline-md text-on-surface mb-4 relative z-10">{featuresData.bento[3].title}</h3>
-            <p className="font-body-md text-body-md text-on-surface-variant mb-8 relative z-10 max-w-sm">{featuresData.bento[3].description}</p>
-            <div className="absolute bottom-[-100px] w-64 h-[400px] bg-white rounded-[40px] shadow-2xl border-[8px] border-surface-container-highest overflow-hidden z-0">
+            <p className="font-body-md text-body-md text-on-surface-variant relative z-10 max-w-sm">{featuresData.bento[3].description}</p>
+            <div className="mt-8 mx-auto w-56 md:w-64 h-[350px] bg-white rounded-[40px] shadow-2xl border-[8px] border-surface-container-highest overflow-hidden z-0 -mb-24 md:-mb-32">
               <img className="w-full h-full object-cover" src={featuresData.bento[3].image} alt="Mobile App" />
             </div>
           </motion.div>
