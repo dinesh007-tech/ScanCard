@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Lock, Shuffle } from 'lucide-react';
+import { Lock } from 'lucide-react';
 import { featuresData } from '../data/mockData';
 
 export const Features: React.FC = () => {
@@ -8,7 +8,7 @@ export const Features: React.FC = () => {
     <div className="w-full">
       {/* Hero Section */}
       <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap text-center">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -16,7 +16,7 @@ export const Features: React.FC = () => {
         >
           {featuresData.hero.headline}
         </motion.h1>
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -24,17 +24,17 @@ export const Features: React.FC = () => {
         >
           {featuresData.hero.subheadline}
         </motion.p>
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="relative w-full h-[400px] md:h-[614px] rounded-3xl overflow-hidden bg-white/70 backdrop-blur-xl border border-white/20 shadow-2xl flex items-center justify-center"
         >
-          <img 
-            className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" 
-            src={featuresData.hero.image} 
-            alt="Hero visualization" 
+          <img
+            className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply"
+            src={featuresData.hero.image}
+            alt="Hero visualization"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent"></div>
         </motion.div>
@@ -43,9 +43,9 @@ export const Features: React.FC = () => {
       {/* Features Bento Grid */}
       <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop pb-section-gap">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-          
+
           {/* AI OCR Engine (Spans 8 cols) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -62,7 +62,7 @@ export const Features: React.FC = () => {
           </motion.div>
 
           {/* Security (Spans 4 cols) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -78,7 +78,7 @@ export const Features: React.FC = () => {
           </motion.div>
 
           {/* Smart CRM Sync (Spans 6 cols) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -94,7 +94,7 @@ export const Features: React.FC = () => {
           </motion.div>
 
           {/* Mobile App Experience (Spans 6 cols) */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

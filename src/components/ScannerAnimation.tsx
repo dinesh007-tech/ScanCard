@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ScanLine, CheckCircle2, Focus, User, Mail, Phone } from 'lucide-react';
+import { CheckCircle2, Focus, User, Mail, Phone } from 'lucide-react';
 
 export const ScannerAnimation: React.FC = () => {
   const [scanState, setScanState] = useState<'idle' | 'scanning' | 'complete'>('scanning');
@@ -9,38 +9,38 @@ export const ScannerAnimation: React.FC = () => {
     const timer = setTimeout(() => {
       setScanState('complete');
     }, 4500); // 4.5 seconds of scanning
-    
+
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="w-full h-full bg-surface-container-low flex items-center justify-center overflow-hidden relative perspective-[1000px]">
-      
+
       {/* Hyper-realistic office background (blurred) */}
-      <div 
+      <div
         className="absolute inset-0 z-0 bg-cover bg-center scale-110"
-        style={{ 
+        style={{
           backgroundImage: 'url("https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000")',
           filter: 'blur(20px) brightness(0.7)'
         }}
       />
 
       {/* Floating animation to simulate hand holding the phone */}
-      <motion.div 
-        animate={{ 
+      <motion.div
+        animate={{
           y: [-10, 10, -10],
           rotateX: [2, -2, 2],
           rotateY: [-2, 2, -2]
         }}
-        transition={{ 
-          duration: 6, 
-          repeat: Infinity, 
-          ease: "easeInOut" 
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut"
         }}
         className="relative z-10"
       >
         {/* Mobile Device Frame (Ultra Realistic) */}
-        <motion.div 
+        <motion.div
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           className="relative w-[300px] h-[600px] md:w-[340px] md:h-[680px] bg-black rounded-[3.5rem] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8),inset_0_0_0_2px_#333,inset_0_0_0_8px_#000] overflow-hidden flex flex-col"
@@ -57,11 +57,11 @@ export const ScannerAnimation: React.FC = () => {
 
           {/* Camera Viewfinder Area */}
           <div className="flex-1 relative bg-surface-container-lowest overflow-hidden flex items-center justify-center">
-            
+
             {/* Live Camera Feed Background (Slightly different office angle) */}
-            <div 
+            <div
               className="absolute inset-0 bg-cover bg-center"
-              style={{ 
+              style={{
                 backgroundImage: 'url("https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000")',
                 filter: 'brightness(0.9) contrast(1.1)'
               }}
@@ -77,7 +77,7 @@ export const ScannerAnimation: React.FC = () => {
             </div>
 
             {/* The Realistic Business Card */}
-            <motion.div 
+            <motion.div
               initial={{ y: 50, rotateZ: -5, rotateX: 20 }}
               animate={{ y: 0, rotateZ: -2, rotateX: 0 }}
               className="w-[88%] h-52 bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.5)] p-6 flex flex-col justify-between border border-white/10 relative z-20"
@@ -92,7 +92,7 @@ export const ScannerAnimation: React.FC = () => {
                   <span className="text-white font-bold text-lg">S</span>
                 </div>
               </div>
-              
+
               <div className="flex flex-col gap-2 w-full mt-4">
                 <div className="flex items-center gap-2">
                   <Phone size={10} className="text-white/50" />
@@ -108,14 +108,14 @@ export const ScannerAnimation: React.FC = () => {
 
               {/* Scanning Laser */}
               {scanState === 'scanning' && (
-                <motion.div 
+                <motion.div
                   initial={{ top: '0%' }}
                   animate={{ top: '100%' }}
                   transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
                   className="absolute left-0 right-0 h-1 bg-blue-500 shadow-[0_0_20px_rgba(59,130,246,1),0_0_40px_rgba(59,130,246,0.6)] z-30"
                 />
               )}
-              
+
               {/* Overlay grid for camera UI */}
               <div className="absolute -inset-4 border-2 border-yellow-400/50 rounded-2xl pointer-events-none transition-all duration-300 z-40">
                 <div className="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 rounded-tl-xl border-yellow-400" />
@@ -129,7 +129,7 @@ export const ScannerAnimation: React.FC = () => {
             <AnimatePresence>
               {scanState === 'scanning' && (
                 <>
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, scale: 0.8, x: -20 }}
                     animate={{ opacity: 1, scale: 1, x: 0 }}
                     exit={{ opacity: 0, scale: 0.9 }}
@@ -140,7 +140,7 @@ export const ScannerAnimation: React.FC = () => {
                     Sarah Jensen
                   </motion.div>
 
-                  <motion.div 
+                  <motion.div
                     initial={{ opacity: 0, scale: 0.8, x: 20 }}
                     animate={{ opacity: 1, scale: 1, x: 0 }}
                     exit={{ opacity: 0, scale: 0.9 }}
@@ -150,8 +150,8 @@ export const ScannerAnimation: React.FC = () => {
                     <Mail size={14} className="text-green-400" />
                     sarah.j@innovatech...
                   </motion.div>
-                  
-                  <motion.div 
+
+                  <motion.div
                     initial={{ opacity: 0, scale: 0.8, y: 20 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.9 }}
@@ -168,13 +168,13 @@ export const ScannerAnimation: React.FC = () => {
 
           {/* Bottom controls / Success state */}
           <div className="h-28 bg-black/90 backdrop-blur-xl border-t border-white/10 flex items-center justify-center z-50 relative">
-            
+
             {/* Phone Home Indicator */}
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 w-1/3 h-1 bg-white/30 rounded-full" />
 
             <AnimatePresence mode="wait">
               {scanState === 'scanning' ? (
-                <motion.div 
+                <motion.div
                   key="scanning"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -189,7 +189,7 @@ export const ScannerAnimation: React.FC = () => {
                   </div>
                 </motion.div>
               ) : (
-                <motion.div 
+                <motion.div
                   key="complete"
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
